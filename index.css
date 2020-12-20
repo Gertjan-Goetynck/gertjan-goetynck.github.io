@@ -18,7 +18,7 @@
     line-height: 5rem;
     margin: 0 auto;
     text-align: center;
-    margin-top: 30%;
+    margin-top: 25%;
 }
 
 /* CTA BUTTON */
@@ -94,18 +94,19 @@ input,textarea{
     transition: all .4s;
 }
 
-input[type="submit"] {
+.submit-form {
     color: var(--main);
     font-weight: bold;
     font-size: 1.2rem;
 }
 
-input[type="submit"]:focus:invalid, 
-input[type="submit"]:focus {
+.submit-form:focus:invalid, 
+.submit-form:focus {
+    outline:none;
     border:none;
 }
 
-input[type="submit"]:hover{
+.submit-form:hover{
     cursor: pointer;
     transform: translateY(-3px);
     box-shadow: 0 0.25rem .5rem var(--dark-2);
@@ -129,13 +130,13 @@ textarea:placeholder-shown + span{
 }
 
 /* STYLES ACTIVE AND INVALID INPUT */
-input:focus:not(input[type="submit"]),
+input:focus,
 textarea:focus{
     outline: none;
     border-left: 8px solid #52C800;
 }
 
-input:focus:invalid:not(input[type="submit"]),
+input:focus:invalid,
 textarea:focus:invalid{
     border-left: 8px solid #ED4040;
 }
