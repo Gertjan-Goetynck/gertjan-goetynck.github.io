@@ -14,13 +14,12 @@
     <!-- HEADER WITH HERO IMAGE AND CTA BUTTON -->
     <header class="hero">
         <div class="wrapper">
-            <h1>Gertjan Goetynck Introduction</h1>
             <div class="intro">
                 <p>Hi, I'm Gertjan!</p>
                 <p>Welcome to my site!</p>
             </div>
             <div class="cta-button">
-                <a href="#site-start">
+                <a href="#about">
                     <svg height="60" width="200" xmlns="http://www.w3.org/2000/svg">
                         <rect class="shape" rx="30px" ry="30px" height="60" width="200" />
                         <text class="text" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"> About
@@ -30,7 +29,8 @@
             </div>
         </div>
     </header>
-    <nav id="site-start">
+    <!-- MAIN NAVIGATION -->
+    <nav id="about">
         <ul class="nav-list">
             <li class="site-title"><a href="#">Gertjans Introduction</a></li>
             <input type="checkbox" id="toggle" name="toggle">
@@ -43,9 +43,9 @@
         </ul>
     </nav>
     <main class="content">
-        <section>
+        <div class="panel">
             <article class="wrapper">
-                <h2>About me</h2>
+                <h1>About me</h1>
                 <img src="./images/avatar.svg" alt="Gertjan avatar" class="avatar">
                 <p>Hey! My name is <em>Gertjan Goetynck</em>, and I'm an aspiring <em>Java Developer</em>.</p>
                 <p>On this small website I will give you a short bootcamp about who I am as a person, and the things
@@ -77,10 +77,10 @@
                 <p>If you want to know more about me, feel free to visit the other pages of this site or fill in the
                     form below!</p>
             </article>
-        </section>
-        <section>
+        </div>
+        <div class="panel">
             <article class="wrapper">
-                <h2>Contact me</h2>
+                <h1>Contact me</h1>
                 <form name="contact" action="https://formspree.io/f/mzbkkbza" method="POST">
                     <div>
                         <label for="name">
@@ -106,7 +106,7 @@
                     <input type="submit" value="Submit" class="submit-form" />
                 </form>
             </article>
-        </section>
+        </div>
 
     </main>
 

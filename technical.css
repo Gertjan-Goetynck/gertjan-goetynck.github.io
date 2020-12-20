@@ -1,5 +1,8 @@
 figure{
     margin:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .skill-list{
@@ -20,10 +23,9 @@ figure{
 
 }
 
-.skill-list figure img,
 .skill-list figure figcaption{
-    width:100%;
-    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     font-weight: bold;
     font-size: 1.2rem;
 }
