@@ -1,0 +1,337 @@
+@import "normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+:root{
+    /* VARIABLES FOR COLORS */
+    --main-light-1:#00D4D4;
+    --main:#00A2A2;
+    --main-dark-1:#7ba2a2;
+    --light-1:#F3F3F3;
+    --dark-1: #303030;
+    --dark-2:#808080;
+    --dark-3: #bababa;
+}
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 2rem;
+    background-color: var(--light-1);
+    scroll-behavior: smooth;
+}
+
+/* TYPOGRAPHY */
+h1,
+h2,
+h3{
+    color:var(--main-dark-1);
+}
+
+a{
+    color:black;
+    font-weight: bolder;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 2px solid;
+    transition: color .4s ease;
+}
+
+a:hover,
+.content section a:hover {
+    color:var(--main-light);
+}
+
+em{
+    color:var(--main-dark-1);
+    font-style:normal;
+    font-weight: bolder;
+}
+
+/* CONTENT WRAPPER */
+section > .wrapper {
+    padding: 0 1rem;
+    margin-bottom: 5rem;
+}
+
+/* NAVIGATION */
+nav{
+    padding: 1rem;
+    background-color: var(--main);
+}
+nav a{
+    border: none;
+    display: block;
+    color:var(--light-1);
+}
+.nav-item a{
+    padding:.8rem 1.6rem;
+
+}
+
+/* NO FLEX-DIRECTION:COLUMN TO MAKE IT POSSIBLE FOR THE TITLE AND THE TOGGLE ICON TO BE ON THE SAME ROW, INSTEAD FLEX WRAP IS USED WITH ALL MENU ITEMS HAVING A WIDTH OF 100%*/
+.nav-list{
+    padding: 0;
+    margin: 0;
+    list-style:none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* STYLES THE NAV ITEMS AND HIDES THEM FOR THE MOBILE MENU */
+.nav-item{
+    order:2;
+    width:100%;
+    text-align: center;
+    display: none;
+}
+
+.nav-item:not(:last-child){
+    border-bottom: 1px solid var(--light-1);
+}
+
+.nav-list .active{
+    background-color: var(--main-dark-1);
+}
+
+/* HIDES THE CHECKBOX THAT IS USED AS A HACK TO TOGGLE THE MOBILE MENU */
+#toggle{
+    display: none;
+}
+
+/* STYLES THE LABEL OF THE CHECKBOX WHICH SERVES AS AN ICON FOR THE TOGGLE */
+.toggle-icon{
+    order:1;
+    font-size: 1.5rem;
+    color: var(--light-1);
+}
+
+/* SHOWS THE NAV ITEMS WHEN THE CHECKBOX IS CHECKED */
+#toggle:checked~.nav-item{
+    display:block;
+}
+
+/* TOOLTIP */
+.tooltip {
+    position: relative;
+    padding-bottom: 2px;
+    border-bottom: 2px dotted;
+}
+
+/* TOOLTIP TEXT */
+.tooltip .tooltipText {
+  visibility: hidden;
+  width: 15rem;
+  background-color:var(--dark-1);
+  color: var(--light-1);
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  left:-200%;
+  bottom:100%;
+  margin-bottom: 3px;
+
+}
+
+.tooltip:hover{
+    cursor:help;
+}
+
+.tooltip:hover .tooltipText {
+  visibility: visible;
+}
+
+.tooltip .tooltipText::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+/* SECTION STYLES */
+.content{
+    display:flex;
+    flex-direction: column;
+}
+
+.content section{
+    padding: 1rem 0;
+}
+
+.content section:last-child {
+    padding-bottom: 5rem;
+}
+
+.content section:nth-child(even) {
+    transform: skewY(-.7deg);
+    border-top-left-radius: 40px;
+    background-color: var(--main);
+}
+
+.content section:nth-child(even):before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: inherit;
+    position: absolute;
+    top: -40px;
+    right: 0;
+}
+
+.content section:nth-child(even)::after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    background-color: var(--light-1);
+    position: absolute;
+    top: -80px;
+    right: 0;
+    border-radius: 50%;
+}
+
+.content section:nth-child(even) > * {
+    transform: skewY(.7deg);
+    color:var(--light-1);
+}
+
+.content section:nth-child(even) a,
+.content section:nth-child(even) em,
+.content section:nth-child(even) h1,
+.content section:nth-child(even) h2,
+.content section:nth-child(even) h3{
+        color:var(--light-1);
+}
+
+/* STICKY FOOTER */
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+header,
+.content{
+    flex: 1 0 auto;
+}
+
+.footer{
+    flex-shrink:0;
+}
+
+.content{
+    background-color: var(--light-1);
+}
+
+.footer{
+    margin-top: -5rem;
+    background-color: var(--dark-1);
+    z-index: 2;
+}
+
+/* CONTACT DETAILS */
+.contact-list{
+    color:var(--light-1);
+    list-style-type: none;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.contact-listitem{
+    margin:2rem 0;
+    width: 50%;
+}
+
+.contact-listitem a{
+    border-bottom: none;
+}
+
+.contact-listitem a{
+    display: block;
+    height: 100%;
+}
+
+.contact-listitem svg{
+    fill:var(--dark-2);
+    transition: fill .4s ease;
+}
+
+.contact-listitem svg:hover{
+    fill:var(--dark-3);
+}
+
+/* TABLET */
+@media only screen and (min-width:480px){
+    .contact-list{
+        flex-direction: row;
+    }
+    .contact-listitem{
+        height:8rem;
+        width: 8rem;
+    }
+}
+
+/* DESKTOP */
+@media only screen and (min-width:1024px){
+    .wrapper{
+        width:1024px;
+        margin: 0 auto;
+    }
+    .nav-item{
+        display: block;
+        width: auto;
+    }
+    .toggle-icon{
+        display: none;
+    }
+    nav{
+        background-color: transparent;
+    }
+    .site-title a,
+    .nav-item a{
+        color:var(--main);
+        font-size: 1.2rem;
+    }
+    .nav-list{
+        position: relative;
+    }
+
+    .nav-item{
+        margin-right: 3rem;
+        position: relative;
+    }
+
+    .nav-item a::after{
+        content: "";
+        position: absolute;
+        left:0;
+        bottom: 0;
+        width:0;
+        height:3px;
+        background-color: var(--main-dark-1);
+        transition: width .4s ease;
+    }
+
+    .nav-item:hover a::after,
+    .active a::after
+    {
+        width:100%;
+    }
+
+    .nav-list .active{
+        background-color: transparent;
+    }
+    .site-title{
+        margin: 0 auto 0 3rem;
+    }
+
+}

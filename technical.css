@@ -1,0 +1,65 @@
+figure{
+    margin:0;
+}
+
+.skill-list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-top:2rem;
+}
+
+.skill-list li{
+    list-style:none;
+    padding:0;
+    width:70%;
+    margin: 0 0 1.8rem 0;
+
+}
+
+.skill-list figure img,
+.skill-list figure figcaption{
+    width:100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.skill-list figure img{
+    opacity:.5;
+    transition: opacity .4s ease;
+}
+.skill-list li:hover img{
+    opacity:1;
+}
+
+@media only screen and (min-width:481px){
+    .skill-list{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+    .skill-list li{
+        width:34%;
+    }
+}
+@media only screen and (min-width:1024px){
+    .skill-list {
+        justify-content: space-between;
+    }
+
+    .skill-list li img{
+        width:60%;
+    }
+
+    .skill-list li figcaption{
+        text-align: left;
+    }
+
+    .skill-list li{
+        width:26%;
+    }
+}
