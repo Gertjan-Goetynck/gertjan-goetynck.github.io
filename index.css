@@ -129,13 +129,13 @@ textarea:placeholder-shown + span{
 }
 
 /* STYLES ACTIVE AND INVALID INPUT */
-input:focus,
+input:focus:not(input[type="submit"]),
 textarea:focus{
     outline: none;
     border-left: 8px solid #52C800;
 }
 
-input:focus:invalid,
+input:focus:invalid:not(input[type="submit"]),
 textarea:focus:invalid{
     border-left: 8px solid #ED4040;
 }
