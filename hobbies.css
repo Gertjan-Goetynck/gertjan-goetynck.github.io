@@ -1,0 +1,41 @@
+/* .climbing-images figure img{
+    float:none;
+    width: 100%;
+} */
+.climbing-images{
+    display: flex;
+    flex-direction: column;
+}
+.climbing-images figure{
+    width: 100%;
+}
+
+.climbing-images img{
+    width: 100%;
+}
+.climbing-images figure:first-child,
+.climbing-images figure:last-child{
+    display: none;
+}
+
+.embeded-youtube{
+
+    width: 100%;
+}
+/* TABLET */
+@media only screen and (min-width:481px){
+    .climbing-images figure:first-child{
+        display: block;
+    }
+
+    .climbing-images{
+        flex-direction: row;
+    }
+}
+
+/* DESKTOP */
+@media only screen and (min-width:1024px){
+    .climbing-images figure:last-child{
+        display: block;
+    }
+}

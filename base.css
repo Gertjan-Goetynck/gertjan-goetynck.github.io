@@ -15,10 +15,15 @@
     box-sizing: border-box;
 }
 
+
+html, body{
+    
+    height: 100%;
+}
 html{
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    line-height: 2rem;
+    line-height: 2.3rem;
     background-color: var(--light-1);
     scroll-behavior: smooth;
 }
@@ -37,7 +42,9 @@ h1{
 h2{
     font-size: 1.3rem;
 }
-
+p{
+    margin: 1.2rem 0;
+}
 a{
     color:black;
     font-weight: bolder;
@@ -165,7 +172,7 @@ nav a{
   border-color: black transparent transparent transparent;
 }
 
-/* .panel STYLES */
+/* PANEL STYLES */
 .content{
     display:flex;
     flex-direction: column;
@@ -219,15 +226,24 @@ nav a{
         color:var(--light-1);
 }
 
+figure,
+figure img{
+    margin: 0;
+    width: 100%;
+}
+
 /* STICKY FOOTER */
 body{
     display: flex;
     flex-direction: column;
 }
 
-header,
 .content{
     flex: 1 0 auto;
+}
+
+.content{
+    justify-self: start;
 }
 
 .footer{
@@ -278,13 +294,19 @@ header,
 }
 
 /* TABLET */
-@media only screen and (min-width:480px){
+@media only screen and (min-width:481px){
     .contact-list{
         flex-direction: row;
     }
     .contact-listitem{
         height:8rem;
         width: 8rem;
+    }
+
+    figure img{
+        width:50%;
+        float: left;
+        margin-right: 1rem;
     }
 }
 
@@ -325,7 +347,7 @@ header,
         bottom: 0;
         width:0;
         height:3px;
-        background-color: var(--main-dark-1);
+        background-color: var(--main);
         transition: width .4s ease;
     }
 

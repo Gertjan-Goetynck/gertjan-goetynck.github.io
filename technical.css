@@ -1,10 +1,4 @@
-figure{
-    margin:0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
+/* CREATES THE SKILL LIST GRID */
 .skill-list{
     display: flex;
     flex-wrap: wrap;
@@ -30,7 +24,17 @@ figure{
     font-size: 1.2rem;
 }
 
+/* EASILY ALIGNS THE SKILL LOGOS AND TITLES */
+.skill-list figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* HOVER ANIMATION FOR SKILL LIST ICONS */
 .skill-list figure img{
+    margin: 0;
     opacity:.5;
     transition: opacity .4s ease;
 }
@@ -38,6 +42,7 @@ figure{
     opacity:1;
 }
 
+/* TABLET */
 @media only screen and (min-width:481px){
     .skill-list{
         flex-direction: row;
@@ -48,6 +53,8 @@ figure{
         width:34%;
     }
 }
+
+/* DESKTOP */
 @media only screen and (min-width:1024px){
     .skill-list {
         justify-content: space-between;

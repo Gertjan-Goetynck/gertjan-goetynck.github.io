@@ -1,6 +1,7 @@
 /* HERO HEADER */
 .hero{
     height:100vh;
+    flex: 1 0 auto;
     background: linear-gradient(
         rgba(0, 0, 0, 0.7), 
         rgba(0, 0, 0, 0.9)
@@ -64,11 +65,12 @@
 }
 
 /* ABOUT ME */
-.avatar{
+/* .avatar{
     float: left;
     width:98%;
     padding: .8rem;
-}
+} */
+
 
 /* CONTACT FORM */
 form div{
