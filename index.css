@@ -100,6 +100,7 @@ input[type="submit"] {
     font-size: 1.2rem;
 }
 
+input[type="submit"]:focus:invalid, 
 input[type="submit"]:focus {
     border:none;
 }
